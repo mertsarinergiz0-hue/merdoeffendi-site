@@ -1,0 +1,34 @@
+name: YouTube kesitlerini güncelle
+
+on:
+  schedule:
+    - cron: "23 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Videoları çek
+        run: node scripts/fetch-youtube.mjs
+      - name: Değişiklik varsa kaydet
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add videos.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Kesitleri güncelle"
+            git pull --rebase
+            git push
+          fi

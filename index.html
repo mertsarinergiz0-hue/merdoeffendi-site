@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MERDOEFFENDİ</title>
+<meta name="description" content="MERDOEFFENDİ resmi sitesi: yayın kesitleri, Kick yayın durumu ve bağış paketleri.">
+<meta property="og:title" content="MERDOEFFENDİ">
+<meta property="og:description" content="Yayın kesitleri, canlı yayın durumu ve bağış paketleri.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2314002E'/%3E%3Cpath d='M32 6c3 10 14 16 14 30a14 14 0 0 1-28 0c0-8 5-12 8-17 1 5 4 7 6 8-2-8-2-14 0-21z' fill='%23FF7A00'/%3E%3Cpath d='M32 30c2 6 8 8 8 15a8 8 0 0 1-16 0c0-5 4-7 8-15z' fill='%23FFE600'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Comic+Neue:wght@400;700&family=Press+Start+2P&display=swap">
+<style>
+/* Layout: 90'lar GeoCities enerjisi. Alevli başlık, kayan yazı, Windows 95 pencereleri içinde kesitler ve paketler. Tek, bilinçli koyu görünüm. */
+:root{
+  color-scheme:dark;
+  --bg:#14002E; --bg2:#2A0063; --fg:#F6EEFF; --muted:#D3C2F7;
+  --win:#C0C0C0; --win-fg:#0B0B0B; --win-line:#808080;
+  --title-a:#000080; --title-b:#E100FF;
+  --fire1:#FFE600; --fire2:#FF7A00; --fire3:#E01B00;
+  --cyan:#00F0FF; --lime:#7CFF3A; --pink:#FF3CAC;
+  --out:inset -1px -1px 0 #404040, inset 1px 1px 0 #fff, inset -2px -2px 0 #808080, inset 2px 2px 0 #dfdfdf;
+  --in:inset 1px 1px 0 #404040, inset -1px -1px 0 #fff, inset 2px 2px 0 #808080, inset -2px -2px 0 #dfdfdf;
+  --f-display:"Bungee","Impact","Arial Black",sans-serif;
+  --f-body:"Comic Neue","Comic Sans MS","Chalkboard SE",cursive,sans-serif;
+  --f-pixel:"Press Start 2P","Courier New",monospace;
+}
+*{box-sizing:border-box}
+img{max-width:100%}
+[hidden]{display:none!important}
+body{
+  margin:0;
+  background-color:var(--bg);
+  background-image:
+    radial-gradient(1.5px 1.5px at 20px 30px,#fff 98%,transparent),
+    radial-gradient(1px 1px at 90px 80px,var(--cyan) 98%,transparent),
+    radial-gradient(1.5px 1.5px at 150px 20px,var(--pink) 98%,transparent),
+    radial-gradient(1px 1px at 60px 140px,#fff 98%,transparent),
+    linear-gradient(180deg,var(--bg2),var(--bg) 40%);
+  background-size:180px 180px,200px 200px,240px 240px,160px 160px,100% 100%;
+  color:var(--fg);font-family:var(--f-body);font-size:18px;line-height:1.5;
+  padding-block:0 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+.wrap{max-width:1040px;margin-inline:auto}
+h1,h2,h3,p{margin:0}
+a{color:var(--cyan)}
+button{font:inherit;cursor:pointer;color:inherit}
+:focus-visible{outline:3px dashed var(--fire1);outline-offset:3px}
+
+/* Alevli başlık */
+.hero{position:relative;height:clamp(230px,38vw,320px);margin-top:12px;border:3px solid #000;box-shadow:0 0 0 3px var(--pink),0 0 0 6px #000;overflow:hidden;background:linear-gradient(180deg,#05000F,#1B0040)}
+#fire{position:absolute;inset:0;width:100%;height:100%;image-rendering:pixelated}
+.hero-in{position:relative;z-index:2;height:100%;display:grid;place-content:center;justify-items:center;gap:10px;text-align:center;padding:16px}
+.wordart{font-family:var(--f-display);font-weight:400;font-size:clamp(2rem,8.4vw,5.2rem);line-height:1;letter-spacing:.02em;text-transform:uppercase;
+  color:var(--fire1);background:linear-gradient(180deg,#fff 0%,var(--fire1) 35%,var(--fire2) 70%,var(--fire3) 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  -webkit-text-stroke:2px #3A0000;filter:drop-shadow(4px 4px 0 #000);overflow-wrap:anywhere;transform:rotate(-2deg)}
+.sub{font-weight:700;background:#000;color:var(--lime);padding:3px 12px;border:2px solid var(--lime);font-size:1rem;transform:rotate(1deg)}
+.stickers{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.sticker{font-family:var(--f-display);font-size:.8rem;padding:2px 8px;background:var(--pink);color:#000;border:2px solid #000;transform:rotate(3deg)}
+.blink{animation:blink 1s steps(2,jump-none) infinite}
+@keyframes blink{50%{opacity:.15}}
+
+/* Kayan yazı */
+.marquee{margin-top:18px;overflow:hidden;background:#000;border-block:3px double var(--fire1);white-space:nowrap}
+.marquee span{display:inline-block;padding:6px 0;padding-left:100%;font-family:var(--f-display);font-size:1rem;color:var(--fire1);animation:slide 28s linear infinite}
+@keyframes slide{to{transform:translateX(-100%)}}
+
+/* Gezinme */
+nav{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 6px}
+.b90{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:8px 18px;background:var(--win);color:var(--win-fg);border:0;box-shadow:var(--out),0 0 0 2px #000;font-family:var(--f-display);font-size:.95rem;text-decoration:none;text-transform:uppercase}
+.b90:active{box-shadow:var(--in),0 0 0 2px #000;transform:translate(1px,1px)}
+.b90:disabled{opacity:.6}
+.b90.hot{background:linear-gradient(180deg,var(--fire1),var(--fire2));color:#000}
+.b90.sm{min-height:38px;padding:6px 12px;font-size:.8rem}
+.b90[aria-disabled="true"]{opacity:.6;pointer-events:none}
+nav .b90[aria-current="page"]{background:var(--fire1);box-shadow:var(--in),0 0 0 2px #000}
+
+/* Pencereler */
+.win{background:var(--win);color:var(--win-fg);box-shadow:var(--out),0 0 0 2px #000,6px 6px 0 2px rgba(0,0,0,.6);min-width:0}
+.tbar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:3px;padding:3px 4px 3px 8px;background:linear-gradient(90deg,var(--title-a),var(--title-b));color:#fff;font-family:var(--f-display);font-size:.85rem;letter-spacing:.03em}
+.tbar b{font-weight:400;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.tb{display:flex;gap:3px;flex:none}
+.tb i{font-style:normal;width:18px;height:16px;display:grid;place-items:center;background:var(--win);color:#000;box-shadow:var(--out);font-family:var(--f-body);font-weight:700;font-size:.75rem;line-height:1}
+.wbody{padding:14px}
+.win h2.in-title,.win h3{font-family:var(--f-display);font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:1.1}
+.stack{display:grid;gap:26px;margin-top:22px}
+
+.lead{display:grid;gap:10px}
+.lead p{font-size:1.1rem}
+.lead .row{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+
+/* Kesitler */
+.railbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin-bottom:12px}
+.track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 14px;scrollbar-color:var(--title-b) var(--win)}
+.clip{flex:0 0 min(290px,82%);scroll-snap-align:start;text-decoration:none;color:var(--win-fg);display:block;min-width:0}
+.thumb{position:relative;aspect-ratio:16/9;display:grid;place-items:center;overflow:hidden;box-shadow:var(--in);background:#000}
+.thumb::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,hsl(var(--h) 85% 48%),hsl(calc(var(--h) + 60) 85% 22%))}
+.thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.thumb::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(0,0,0,.28) 3px 4px);pointer-events:none}
+.thumb svg{position:relative;z-index:2;width:46px;height:46px;transition:transform .15s}
+.clip:hover .thumb svg,.pk:hover .thumb svg{transform:scale(1.2) rotate(-6deg)}
+.clip h3{font-size:.95rem;margin-top:10px;overflow-wrap:anywhere}
+.meta{font-size:.9rem;color:#333;margin-top:2px}
+
+/* Duyurular (not defteri) */
+.note{background:#fff;color:#000;box-shadow:var(--in);padding:12px 14px;font-family:"Courier New",monospace;font-size:.95rem;display:grid;gap:12px}
+.note div{display:grid;gap:2px}
+.note time{color:#555}
+.note strong{font-size:1.02rem}
+.tag-new{display:inline-block;background:var(--fire3);color:#fff;font-family:var(--f-display);font-size:.7rem;padding:0 6px;margin-left:6px}
+
+/* Yapım aşaması şeridi */
+.uc{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;padding:10px 14px;background:repeating-linear-gradient(-45deg,#FFD400 0 16px,#111 16px 32px);border:3px solid #000}
+.uc span{background:#000;color:var(--fire1);font-family:var(--f-display);padding:4px 10px;text-transform:uppercase;font-size:.85rem;text-align:center}
+
+/* Gizemli kutular */
+.mystery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px}
+.lcd{background:#000;color:var(--lime);box-shadow:var(--in);font-family:var(--f-pixel);padding:12px;text-align:center;line-height:1.6;overflow-wrap:anywhere}
+.reveal{min-height:74px;display:grid;place-items:center;font-size:.8rem}
+.reveal.spin{animation:shake .18s linear infinite}
+@keyframes shake{25%{transform:translate(-3px,2px) rotate(-1deg)}75%{transform:translate(3px,-2px) rotate(1deg)}}
+.reveal.done{color:#000;animation:rainbow .8s linear infinite}
+@keyframes rainbow{0%{background:#FFE600}25%{background:#7CFF3A}50%{background:#00F0FF}75%{background:#FF3CAC}100%{background:#FFE600}}
+.price{font-family:var(--f-pixel);font-size:1.1rem;color:var(--lime);background:#000;box-shadow:var(--in);padding:8px 10px;display:inline-block}
+.mbox{display:grid;gap:12px}
+.mbox .row,.pk .bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+
+/* Paketler */
+.tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:16px}
+select{font:inherit;font-weight:700;background:#fff;color:#000;border:0;box-shadow:var(--in);padding:8px 10px;min-height:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:22px}
+.pk{display:grid;grid-template-rows:auto 1fr}
+.pk .wbody{display:grid;gap:12px;align-content:space-between}
+.pk h3{font-size:.9rem}
+
+/* Hakkımızda */
+.about p{margin-bottom:12px}
+.facts{display:grid;gap:8px;margin-top:8px}
+.facts div{background:#fff;box-shadow:var(--in);padding:8px 12px;overflow-wrap:anywhere}
+.facts b{font-family:var(--f-display);font-weight:400;text-transform:uppercase;font-size:.8rem;color:var(--title-a);display:block}
+.facts a{color:#0000CC}
+
+/* Kick yayın bölümü */
+.onair{display:grid;gap:14px}
+.banner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;padding:10px 14px;border:3px solid #000;background:#000;color:var(--fire1);font-family:var(--f-display);text-transform:uppercase}
+.banner .led{width:16px;height:16px;border-radius:50%;background:#555;border:2px solid #000;flex:none}
+.banner .stat{display:flex;align-items:center;gap:10px;font-size:1.15rem}
+.banner small{font-family:var(--f-body);font-weight:700;text-transform:none;color:var(--muted);font-size:.95rem}
+.onair[data-live="live"] .banner{background:var(--fire3);color:#fff}
+.onair[data-live="live"] .led{background:#fff;animation:blink 1s steps(2,jump-none) infinite}
+.onair[data-live="live"] .banner small{color:#fff}
+.onair[data-live="unknown"] .banner{background:#2b2b2b;color:#ddd}
+.screen{position:relative;aspect-ratio:16/9;background:#000;box-shadow:var(--in);overflow:hidden;display:grid;place-items:center}
+.screen canvas{position:absolute;inset:62% 0 0 0;width:100%;height:38%;image-rendering:pixelated}
+.bars{position:absolute;inset:0 0 38% 0;background:linear-gradient(90deg,#c0c0c0 0 14.28%,#c0c000 0 28.56%,#00c0c0 0 42.84%,#00c000 0 57.12%,#c000c0 0 71.4%,#c00000 0 85.68%,#0000c0 0)}
+.screen .msg{position:relative;z-index:2;text-align:center;display:grid;gap:12px;justify-items:center;padding:16px}
+.screen .msg .lcd{font-size:clamp(.7rem,2.6vw,1.1rem);padding:12px 16px;border:2px solid var(--lime)}
+.screen .msg p{background:#000;color:#fff;padding:2px 10px;font-weight:700}
+.screen.live canvas,.screen.live .bars{display:none}
+.screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3}
+
+/* Alt bilgi */
+footer{margin-top:40px;display:grid;gap:14px;justify-items:center;text-align:center;color:var(--muted);font-size:.95rem}
+.counter{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px}
+.counter .lcd{padding:8px 12px;font-size:.8rem;letter-spacing:.1em}
+.rainbow{width:100%;height:6px;border:0;background:linear-gradient(90deg,#f00,#ff0,#0f0,#0ff,#00f,#f0f,#f00);margin:0}
+
+/* Önizleme penceresi */
+dialog{padding:0;border:0;background:transparent;width:min(520px,calc(100% - 32px));color:var(--win-fg);overflow:visible}
+dialog::backdrop{background:rgba(10,0,30,.8)}
+dialog .win{box-shadow:var(--out),0 0 0 2px #000,0 0 0 6px var(--pink)}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .marquee span{padding-left:0;white-space:normal;display:block;text-align:center}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <canvas id="fire" aria-hidden="true"></canvas>
+    <div class="hero-in">
+      <div class="stickers"><span class="sticker blink">YENİ!</span><span class="sticker">%100 ATEŞLİ</span></div>
+      <h1 class="wordart" id="brandName"></h1>
+      <p class="sub" id="liveLine"></p>
+    </div>
+  </header>
+
+  <div class="marquee" aria-hidden="true"><span id="marq"></span></div>
+
+  <nav aria-label="Ana gezinme">
+    <button class="b90" data-go="anasayfa">Ana Sayfa</button>
+    <button class="b90" data-go="bagis">Bağış</button>
+    <button class="b90" data-go="hakkimizda">Hakkımızda</button>
+  </nav>
+
+  <!-- ANA SAYFA -->
+  <main data-view="anasayfa" class="stack">
+    <section class="win">
+      <div class="tbar"><b>hosgeldin.txt</b><span class="tb" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+      <div class="wbody lead">
+        <h2 class="in-title" id="heroTitle" style="font-size:1.5rem"></h2>
+        <p>Yayının en komik anları, kesitler ve duyurular burada. Bağış sayfasından bir medya seç, yayında ekrana düşsün.</p>
+        <div class="row">
+          <button class="b90 hot" data-go="bagis">Bağış Yap</button>
+          <a class="b90" id="ytTop" href="#" target="_blank" rel="noopener">YouTube Kanalı</a>
+          <a class="b90" id="kickTop" href="#" target="_blank" rel="noopener">Kick Kanalı</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="win">
+      <div class="tbar"><b>son_kesitler.exe</b><span class="tb" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+      <div class="wbody">
+        <div class="railbar">
+          <span>Kaydır, tıkla, güle güle izle.</span>
+          <span style="display:flex;gap:8px"><button class="b90 sm" id="prev" aria-label="Önceki kesitler">&larr;</button><button class="b90 sm" id="next" aria-label="Sonraki kesitler">&rarr;</button></span>
+        </div>
+        <div class="track" id="track" tabindex="0" aria-label="Son kesitler"></div>
+        <div style="margin-top:6px"><a class="b90 hot" id="ytMore" href="#" target="_blank" rel="noopener">Daha Fazla Kesit</a></div>
+      </div>
+    </section>
+
+    <section class="win">
+      <div class="tbar"><b>kick_yayini.exe</b><span class="tb" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+      <div class="wbody onair" id="onair" data-live="unknown">
+        <div class="banner">
+          <span class="stat"><span class="led" aria-hidden="true"></span><span id="statTxt">Yayın durumu okunuyor</span></span>
+          <small id="statSub"></small>
+          <a class="b90 hot sm" id="watchBtn" href="#" target="_blank" rel="noopener" hidden>Kick'te Aç</a>
+        </div>
+        <div class="screen" id="screen">
+          <div class="bars" aria-hidden="true"></div>
+          <canvas id="snow" aria-hidden="true"></canvas>
+          <div class="msg" id="msg"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="win">
+      <div class="tbar"><b>duyurular.txt</b><span class="tb" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+      <div class="wbody"><div class="note" id="news"></div></div>
+    </section>
+  </main>
+
+  <!-- BAĞIŞ -->
+  <main data-view="bagis" class="stack" hidden>
+    <section class="win">
+      <div class="tbar"><b>bagis_sistemi.exe</b><span class="tb" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+      <div class="wbody lead">
+        <h2 class="in-title" style="font-size:1.5rem">Bağış yap, ekranda sahne alsın</h2>
+        <p>Aşağıdan bir video ya da GIF seç. Bağış yaparken fiyatını yaz, seçtiğin içerik yayında gösterilir. Cüzdanın kısa, hevesin uzunsa mystery paketler seni bekliyor.</p>
+        <div class="row"><a class="b90 hot" data-donate href="#" target="_blank" rel="noopener">Bağış Yap</a></div>
+      </div>
+    </section>
+
+    <div class="mystery" id="mystery"></div>
+
+    <section class="win">
+      <div class="tbar"><b>tekli_paketler</b><span class="tb" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+      <div class="wbody">
+        <div class="tools">
+          <label for="sort"><b>Sırala:</b></label>
+          <select id="sort">
+            <option value="def">Varsayılan</option>
+            <option value="asc">Fiyat (Az → Çok)</option>
+            <option value="desc">Fiyat (Çok → Az)</option>
+            <option value="az">İsim (A–Z)</option>
+            <option value="za">İsim (Z–A)</option>
+          </select>
+        </div>
+        <div class="grid" id="packs"></div>
+      </div>
+    </section>
+
+    <div class="uc"><span>Paket listesi güncelleniyor</span><span class="blink">Örnek içerik gösteriliyor</span></div>
+  </main>
+
+  <!-- HAKKIMIZDA -->
+  <main data-view="hakkimizda" class="stack" hidden>
+    <section class="win">
+      <div class="tbar"><b>hakkimizda.txt</b><span class="tb" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+      <div class="wbody about">
+        <h2 class="in-title" style="font-size:1.5rem;margin-bottom:10px">Kim bu yayıncı?</h2>
+        <p id="aboutText"></p>
+        <div class="facts">
+          <div><b>Yayın</b><a id="kickAbout" href="#" target="_blank" rel="noopener">Kick</a></div>
+          <div><b>Kesitler</b><a id="ytAbout" href="#" target="_blank" rel="noopener">YouTube</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <hr class="rainbow">
+    <div class="counter"><span>Bu tarayıcıdaki ziyaret sayın:</span><span class="lcd" id="count">000001</span></div>
+    <p>En iyi 1024x768 çözünürlükte, Netscape ile görüntülenir (şaka).</p>
+    <p id="foot"></p>
+    <p>Bağışlar yayıncıya özel bağış servisi üzerinden alınır.</p>
+  </footer>
+</div>
+
+<dialog id="dlg">
+  <div class="win">
+    <div class="tbar"><b id="dFile">paket.gif</b><span class="tb" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+    <div class="wbody" style="display:grid;gap:12px">
+      <div class="thumb" id="dThumb"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="rgba(0,0,0,.5)"/><path d="M19 15l16 9-16 9z" fill="#fff"/></svg></div>
+      <h3 id="dTitle" style="font-size:1.1rem"></h3>
+      <div><span class="price" id="dPrice"></span></div>
+      <p>Bağış ekranına bu tutarı yazarsan bu medya yayında ekrana gelir.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="b90 hot" data-donate href="#" target="_blank" rel="noopener">Bağış Yap</a>
+        <button class="b90" id="dClose" type="button">Kapat</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script>
+/* ===== Burayı değiştirerek siteyi ayarlarsın ===== */
+const CONFIG = {
+  channelName: "MERDOEFFENDİ",
+  liveLine: "Bu sayfa yanıyor (iyi anlamda)",
+  heroTitle: "Hoş geldin, kemerlerini bağla",
+  marquee: "BAĞIŞ YAP  ★  EKRANDA SAHNE AL  ★  KESİTLERİ KAÇIRMA  ★  MYSTERY PAKETİ AÇ, NE ÇIKACAĞI BELLİ DEĞİL  ★",
+  youtubeUrl: "https://www.youtube.com/merdoeffendi", // videos.json gelince gerçek kanal adresiyle değişir
+  kickChannel: "merdoeffendi",
+  donateUrl: "",   // bağış servisi bağlantın (oyunfor / bynogame). Boşsa buton "yakında" der
+  about: "MERDOEFFENDİ Kick'te canlı yayın yapar, en komik anları YouTube'a kesit olarak yükler. Bağış paketleriyle yayında ekrana kendi seçtiğin videoyu ya da GIF'i düşürebilirsin.",
+  news: [
+    {date:"28.10.2026", t:"Site yayında!", p:"Yeni bir kesit yüklendiğinde burada kendiliğinden görünür.", isNew:true}
+  ],
+  mystery: [
+    {name:"Mystery Paket", price:9,  pool:["Örnek video A","Örnek GIF B","Örnek video C","Örnek GIF D"]},
+    {name:"Mystery Paket", price:29, pool:["Örnek video E","Örnek video F","Örnek GIF G","Örnek video H"]}
+  ],
+  packs: [
+    {name:"Örnek video: Alkış", price:20},
+    {name:"Örnek GIF: Dans", price:15},
+    {name:"Örnek video: Efekt", price:50},
+    {name:"Örnek video: Sürpriz", price:35},
+    {name:"Örnek GIF: Tepki", price:25},
+    {name:"Örnek video: Büyük an", price:100}
+  ]
+};
+/* ============================================= */
+
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const tl = n => n + " TL";
+const play = '<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="rgba(0,0,0,.5)"/><path d="M19 15l16 9-16 9z" fill="#fff"/></svg>';
+const hue = i => (i * 67 + 300) % 360;
+const bars = '<span class="tb" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span>';
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const kickUrl = "https://kick.com/" + encodeURIComponent(CONFIG.kickChannel);
+let ytUrl = CONFIG.youtubeUrl;
+
+$("#brandName").textContent = CONFIG.channelName;
+$("#liveLine").textContent = CONFIG.liveLine;
+$("#heroTitle").textContent = CONFIG.heroTitle;
+$("#aboutText").textContent = CONFIG.about;
+$("#foot").textContent = "© " + new Date().getFullYear() + " " + CONFIG.channelName + ". Tüm hakları saklıdır.";
+$("#marq").textContent = (CONFIG.marquee + "  ").repeat(2);
+$("#kickTop").href = kickUrl;
+$("#kickAbout").href = kickUrl;
+function setYt(u){
+  ytUrl = u;
+  ["#ytTop","#ytMore","#ytAbout"].forEach(s => $(s).href = u);
+}
+setYt(ytUrl);
+
+/* Bağış butonları: bağlantı yoksa pasif ve açıklamalı */
+function wireDonate(){
+  document.querySelectorAll("[data-donate]").forEach(a => {
+    if(CONFIG.donateUrl){
+      a.href = CONFIG.donateUrl; a.removeAttribute("aria-disabled"); a.textContent = "Bağış Yap";
+    } else {
+      a.removeAttribute("href"); a.setAttribute("aria-disabled","true"); a.textContent = "Bağış linki yakında";
+    }
+  });
+}
+
+/* Ziyaret sayacı (sadece bu tarayıcıda sayar) */
+try{
+  const n = (parseInt(localStorage.getItem("visits")||"0",10) || 0) + 1;
+  localStorage.setItem("visits", String(n));
+  $("#count").textContent = String(n).padStart(6,"0");
+}catch(e){}
+
+/* Gezinme */
+const views = [...document.querySelectorAll("[data-view]")];
+function show(v){
+  if(!views.some(e => e.dataset.view === v)) v = "anasayfa";
+  views.forEach(e => e.hidden = e.dataset.view !== v);
+  document.querySelectorAll("nav [data-go]").forEach(b => {
+    if(b.dataset.go === v) b.setAttribute("aria-current","page"); else b.removeAttribute("aria-current");
+  });
+  try{ history.replaceState(null,"","#"+v); }catch(e){}
+  window.scrollTo({top:0});
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-go]");
+  if(b) show(b.dataset.go);
+});
+
+/* Kesitler: videos.json'u GitHub'ın zamanlı görevi günceller */
+function ago(iso){
+  const t = Date.parse(iso);
+  if(!t) return "";
+  const m = Math.max(1, Math.round((Date.now() - t) / 60000));
+  if(m < 60) return m + " dakika önce";
+  const h = Math.round(m / 60);
+  if(h < 24) return h + " saat önce";
+  const d = Math.round(h / 24);
+  if(d < 7) return d + " gün önce";
+  if(d < 30) return Math.round(d / 7) + " hafta önce";
+  if(d < 365) return Math.round(d / 30) + " ay önce";
+  return Math.round(d / 365) + " yıl önce";
+}
+function renderClips(list){
+  const t = $("#track");
+  if(!list.length){
+    t.innerHTML = '<div class="win" style="flex:1 1 100%"><div class="tbar"><b>kesit_yok.txt</b>' + bars + '</div><div class="wbody"><p>Kesitler birazdan burada olacak. Şimdilik YouTube kanalına bakabilirsin.</p></div></div>';
+    return;
+  }
+  t.innerHTML = list.map((v,i) => {
+    const thumb = v.thumb && v.thumb.startsWith("https://i.ytimg.com/") ? '<img src="' + esc(v.thumb) + '" alt="" loading="lazy">' : "";
+    return '<a class="clip win" href="' + esc(v.url) + '" target="_blank" rel="noopener">' +
+      '<div class="tbar"><b>kesit_' + String(i+1).padStart(2,"0") + '.avi</b>' + bars + '</div>' +
+      '<div class="wbody"><div class="thumb" style="--h:' + hue(i) + '">' + thumb + play + '</div>' +
+      '<h3>' + esc(v.title) + '</h3><div class="meta">' + esc(ago(v.published)) + '</div></div></a>';
+  }).join("");
+}
+async function loadVideos(){
+  try{
+    const r = await fetch("videos.json?t=" + Date.now(), {cache:"no-store"});
+    if(!r.ok) throw new Error("HTTP " + r.status);
+    const j = await r.json();
+    if(j.channelUrl && j.channelUrl.startsWith("https://www.youtube.com/")) setYt(j.channelUrl);
+    renderClips((j.videos || []).filter(v => v.url && v.url.startsWith("https://www.youtube.com/watch?v=")));
+  }catch(e){ renderClips([]); }
+}
+renderClips([]);
+loadVideos();
+const step = () => Math.max(260, $("#track").clientWidth * .8);
+$("#prev").onclick = () => $("#track").scrollBy({left:-step(),behavior:"smooth"});
+$("#next").onclick = () => $("#track").scrollBy({left: step(),behavior:"smooth"});
+
+/* Duyurular */
+$("#news").innerHTML = CONFIG.news.map(n =>
+  '<div><time>[' + esc(n.date) + ']</time><strong>' + esc(n.t) + (n.isNew ? '<span class="tag-new blink">YENİ!</span>' : '') + '</strong><span>' + esc(n.p) + '</span></div>').join("");
+
+/* Gizemli kutular */
+$("#mystery").innerHTML = CONFIG.mystery.map((m,i) =>
+  '<section class="win"><div class="tbar"><b>gizemli_kutu_' + m.price + '.exe</b>' + bars + '</div>' +
+  '<div class="wbody mbox"><h3 style="font-size:1.05rem">' + esc(m.name) + ' - ' + m.price + 'TL</h3>' +
+  '<p>' + m.price + " TL'lik pakette rastgele bir video çıkar. Ne çıkacağı belli değil, kalbin dayanır mı?</p>" +
+  '<div class="lcd reveal" id="rv' + i + '" aria-live="polite">???</div>' +
+  '<div class="row"><span class="price">' + m.price + ' TL</span><span style="display:flex;gap:8px;flex-wrap:wrap">' +
+  '<button class="b90 sm" data-open="' + i + '">Kutuyu aç!</button>' +
+  '<a class="b90 hot sm" data-donate href="#" target="_blank" rel="noopener">Bağış Yap</a></span></div></div></section>').join("");
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-open]");
+  if(!b) return;
+  const i = +b.dataset.open, pool = CONFIG.mystery[i].pool, el = $("#rv"+i);
+  const final = pool[Math.floor(Math.random()*pool.length)];
+  el.classList.remove("done");
+  if(reduce){ el.textContent = final; el.classList.add("done"); return; }
+  el.classList.add("spin"); b.disabled = true;
+  let n = 0;
+  const t = setInterval(() => {
+    el.textContent = pool[Math.floor(Math.random()*pool.length)];
+    if(++n > 16){ clearInterval(t); el.classList.remove("spin"); el.textContent = final; el.classList.add("done"); b.disabled = false; }
+  }, 90);
+});
+
+/* Tekli paketler */
+function renderPacks(){
+  const s = $("#sort").value;
+  const list = CONFIG.packs.map((p,i) => ({...p,i}));
+  if(s==="asc") list.sort((a,b)=>a.price-b.price);
+  if(s==="desc") list.sort((a,b)=>b.price-a.price);
+  if(s==="az") list.sort((a,b)=>a.name.localeCompare(b.name,"tr"));
+  if(s==="za") list.sort((a,b)=>b.name.localeCompare(a.name,"tr"));
+  $("#packs").innerHTML = list.map(p =>
+    '<article class="pk win"><div class="tbar"><b>paket_' + String(p.i+1).padStart(2,"0") + '.gif</b>' + bars + '</div>' +
+    '<div class="wbody"><div class="thumb" style="--h:' + hue(p.i+3) + '">' + play + '</div>' +
+    '<h3>' + esc(p.name) + '</h3><div class="bar"><span class="price">' + tl(p.price) + '</span>' +
+    '<button class="b90 sm" data-prev="' + p.i + '">Önizle</button></div></div></article>').join("");
+}
+$("#sort").onchange = renderPacks;
+renderPacks();
+
+/* Önizleme */
+const dlg = $("#dlg");
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-prev]");
+  if(!b) return;
+  const i = +b.dataset.prev, p = CONFIG.packs[i];
+  $("#dTitle").textContent = p.name;
+  $("#dPrice").textContent = tl(p.price);
+  $("#dFile").textContent = "paket_" + String(i+1).padStart(2,"0") + ".gif";
+  $("#dThumb").style.setProperty("--h", hue(i+3));
+  if(dlg.showModal) dlg.showModal(); else dlg.setAttribute("open","");
+});
+$("#dClose").onclick = () => dlg.close ? dlg.close() : dlg.removeAttribute("open");
+dlg.addEventListener("click", e => { if(e.target === dlg) dlg.close(); });
+wireDonate();
+
+/* Kick yayın durumu: live.json'u GitHub'ın zamanlı görevi yazar */
+let liveState = "";
+function renderLive(next){
+  if(next === liveState) return;
+  liveState = next;
+  const box = $("#onair"), screen = $("#screen"), msg = $("#msg"), watch = $("#watchBtn");
+  box.dataset.live = next;
+  screen.classList.toggle("live", next === "live");
+  screen.querySelectorAll("iframe").forEach(f => f.remove());
+  watch.hidden = next !== "live";
+  watch.href = kickUrl;
+  if(next === "live"){
+    $("#statTxt").textContent = "Şu an canlı yayındayız!";
+    $("#statSub").textContent = "Gel, sohbete katıl, bağış yap, ekranda sahne al.";
+    const f = document.createElement("iframe");
+    f.src = "https://player.kick.com/" + encodeURIComponent(CONFIG.kickChannel);
+    f.title = "Kick canlı yayın";
+    f.allowFullscreen = true;
+    f.setAttribute("allow","autoplay; fullscreen");
+    screen.appendChild(f);
+    msg.innerHTML = '<div class="lcd">CANLI</div><a class="b90 hot" href="' + kickUrl + '" target="_blank" rel="noopener">Yayına Git</a>';
+  } else if(next === "off"){
+    $("#statTxt").textContent = "Yayın kapalı";
+    $("#statSub").textContent = "Şu an ekranlar karanlık. Kesitlere göz at, yayın başlayınca burada görünür.";
+    msg.innerHTML = '<div class="lcd">SİNYAL YOK</div><p>Yayın kapalı</p><a class="b90 sm" href="' + kickUrl + '" target="_blank" rel="noopener">Kick kanalına bak</a>';
+  } else {
+    $("#statTxt").textContent = "Yayın durumu okunamadı";
+    $("#statSub").textContent = "Yayın açık mı diye Kick kanalına bakabilirsin.";
+    msg.innerHTML = '<div class="lcd">SİNYAL ARANIYOR</div><a class="b90 sm" href="' + kickUrl + '" target="_blank" rel="noopener">Kick kanalına bak</a>';
+  }
+}
+async function readLive(){
+  try{
+    const r = await fetch("live.json?t=" + Date.now(), {cache:"no-store"});
+    if(r.ok){
+      const j = await r.json();
+      if(j.ok && j.live === true && Date.now() - Date.parse(j.checked) < 20*60*1000) return "live";
+      if(j.ok && j.live === false) return "off";
+    }
+  }catch(e){}
+  try{
+    const r = await fetch("https://kick.com/api/v2/channels/" + encodeURIComponent(CONFIG.kickChannel));
+    if(r.ok){ const j = await r.json(); return j && j.livestream ? "live" : "off"; }
+  }catch(e){}
+  return "unknown";
+}
+async function pollLive(){ renderLive(await readLive()); }
+renderLive("unknown");
+pollLive();
+setInterval(pollLive, 60000);
+
+/* Kapalı yayın için TV karıncalanması */
+(function(){
+  const cv = $("#snow"), W = 128, H = 72;
+  cv.width = W; cv.height = H;
+  const ctx = cv.getContext("2d");
+  if(!ctx) return;
+  const img = ctx.createImageData(W,H);
+  function frame(){
+    for(let i=0;i<W*H;i++){
+      const v = Math.random()*255, o = i*4;
+      img.data[o]=v; img.data[o+1]=v; img.data[o+2]=v; img.data[o+3]=255;
+    }
+    ctx.putImageData(img,0,0);
+  }
+  frame();
+  if(reduce) return;
+  let last = 0;
+  function loop(ts){
+    if(liveState !== "live" && ts - last > 90){ last = ts; frame(); }
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+})();
+
+/* Ateş efekti (klasik piksel alev algoritması) */
+(function(){
+  const cv = $("#fire"), W = 110, H = 44;
+  cv.width = W; cv.height = H;
+  const ctx = cv.getContext("2d");
+  if(!ctx) return;
+  const px = new Uint8Array(W*H);
+  const pal = [];
+  for(let i=0;i<=36;i++){
+    const t = i/36;
+    const r = Math.min(255, Math.round(t*520));
+    const g = Math.max(0, Math.min(255, Math.round((t-.32)*400)));
+    const b = Math.max(0, Math.min(255, Math.round((t-.82)*1400)));
+    pal.push([r,g,b,t<.05?0:255]);
+  }
+  for(let x=0;x<W;x++) px[(H-1)*W+x] = 36;
+  const img = ctx.createImageData(W,H);
+  function tick(){
+    for(let x=0;x<W;x++){
+      for(let y=1;y<H;y++){
+        const src = y*W+x, v = px[src];
+        const rnd = Math.floor(Math.random()*3);
+        const dst = src - rnd + 1;
+        const d = 1 + (rnd & 1);
+        const t = dst - W;
+        if(t >= 0) px[t] = v >= d ? v - d : 0;
+      }
+    }
+    for(let i=0;i<W*H;i++){
+      const c = pal[px[i]], o = i*4;
+      img.data[o]=c[0]; img.data[o+1]=c[1]; img.data[o+2]=c[2]; img.data[o+3]=c[3];
+    }
+    ctx.putImageData(img,0,0);
+  }
+  if(reduce){ for(let i=0;i<80;i++) tick(); return; }
+  let last = 0;
+  function loop(ts){
+    if(ts - last > 40){ last = ts; tick(); }
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+})();
+
+show((location.hash || "#anasayfa").slice(1));
+</script>
+</body>
+</html>
