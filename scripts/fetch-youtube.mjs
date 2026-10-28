@@ -104,11 +104,15 @@ async function scrapeVideos(channelId) {
       if (!t) continue;
       let title = t[1];
       try { title = JSON.parse(`"${t[1]}"`); } catch {}
+      // "3 days ago" gibi yazıdan yaklaşık yükleme tarihi hesapla (ay ve yıl yaklaşık sayılır).
+      const rel = after.match(/"content":"(?:Streamed |Premiered )?(\d+) (second|minute|hour|day|week|month|year)s? ago"/);
+      const unit = { second: 1e3, minute: 6e4, hour: 36e5, day: 864e5, week: 6048e5, month: 30 * 864e5, year: 365 * 864e5 };
+      const published = rel ? new Date(Date.now() - Number(rel[1]) * unit[rel[2]]).toISOString() : "";
       seen.add(id);
       out.push({
         id,
         title,
-        published: "",
+        published,
         thumb: `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
         url: `https://www.youtube.com/watch?v=${id}`,
       });
