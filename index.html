@@ -204,7 +204,7 @@ dialog .win{box-shadow:var(--out),0 0 0 2px #000,0 0 0 6px var(--pink)}
       <div class="tbar"><b>hosgeldin.txt</b><span class="tb" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
       <div class="wbody lead">
         <h2 class="in-title" id="heroTitle" style="font-size:1.5rem"></h2>
-        <p>Yayının en komik anları, kesitler ve duyurular burada. Bağış sayfasından bir medya seç, yayında ekrana düşsün.</p>
+        <p>Merdo Effendi'nin en komik yayın anları, kesitleri ve duyuruları burada. Bağış sayfasından bir medya seç, yayında ekrana düşsün.</p>
         <div class="row">
           <button class="b90 hot" data-go="bagis">Bağış Yap</button>
           <a class="b90" id="ytTop" href="#" target="_blank" rel="noopener">YouTube Kanalı</a>
@@ -324,13 +324,13 @@ dialog .win{box-shadow:var(--out),0 0 0 2px #000,0 0 0 6px var(--pink)}
 /* ===== Burayı değiştirerek siteyi ayarlarsın ===== */
 const CONFIG = {
   channelName: "MERDOEFFENDİ",
-  liveLine: "Bu sayfa yanıyor (iyi anlamda)",
-  heroTitle: "Hoş geldin, kemerlerini bağla",
-  marquee: "BAĞIŞ YAP  ★  EKRANDA SAHNE AL  ★  KESİTLERİ KAÇIRMA  ★  MYSTERY PAKETİ AÇ, NE ÇIKACAĞI BELLİ DEĞİL  ★",
+  liveLine: "Merdo Effendi'nin ateşli köşesi",
+  heroTitle: "Effendiler, hoş geldiniz!",
+  marquee: "EFFENDİLER HOŞ GELDİNİZ  ★  BAĞIŞ YAP, EKRANDA SAHNE AL  ★  KESİTLERİ KAÇIRMA  ★  MYSTERY PAKETİ AÇ, NE ÇIKACAĞI BELLİ DEĞİL  ★",
   youtubeUrl: "https://www.youtube.com/@merdoeffendi",
   kickChannel: "merdoeffendi",
   donateUrl: "https://donate.bynogame.com/merdoeffendi", // boşsa buton "yakında" der
-  about: "MERDOEFFENDİ Kick'te canlı yayın yapar, en komik anları YouTube'a kesit olarak yükler. Bağış paketleriyle yayında ekrana kendi seçtiğin videoyu ya da GIF'i düşürebilirsin.",
+  about: "Merdo Effendi Kick'te canlı yayın yapar, oyun serilerini ve en komik anları YouTube'a yükler. Effendiler olarak buradayız. Bağış paketleriyle yayında ekrana kendi seçtiğin videoyu ya da GIF'i düşürebilirsin.",
   news: [
     {date:"28.10.2026", t:"Site yayında!", p:"Yeni bir kesit yüklendiğinde burada kendiliğinden görünür.", isNew:true}
   ],
@@ -416,8 +416,7 @@ function ago(iso){
   const h = Math.round(m / 60);
   if(h < 24) return h + " saat önce";
   const d = Math.round(h / 24);
-  if(d < 7) return d + " gün önce";
-  if(d < 30) return Math.round(d / 7) + " hafta önce";
+  if(d < 60) return d + " gün önce";
   if(d < 365) return Math.round(d / 30) + " ay önce";
   return Math.round(d / 365) + " yıl önce";
 }
@@ -432,7 +431,7 @@ function renderClips(list){
     return '<a class="clip win" href="' + esc(v.url) + '" target="_blank" rel="noopener">' +
       '<div class="tbar"><b>kesit_' + String(i+1).padStart(2,"0") + '.avi</b>' + bars + '</div>' +
       '<div class="wbody"><div class="thumb" style="--h:' + hue(i) + '">' + thumb + play + '</div>' +
-      '<h3>' + esc(v.title) + '</h3><div class="meta">' + esc(ago(v.published)) + '</div></div></a>';
+      '<h3>' + esc(v.title) + '</h3><div class="meta">' + (v.published ? esc(ago(v.published)) + ' yüklendi' : '') + '</div></div></a>';
   }).join("");
 }
 async function loadVideos(){

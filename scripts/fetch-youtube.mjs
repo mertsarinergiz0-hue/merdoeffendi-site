@@ -136,11 +136,34 @@ async function getVideos(channelId) {
   return videos;
 }
 
+// Her videonun yükleme tarihini video sayfasından okur. Daha önce bulunan tarih saklanır, tekrar sorulmaz.
+async function fillDates(videos, oldVideos) {
+  const known = new Map(oldVideos.filter((v) => v.published).map((v) => [v.id, v.published]));
+  for (const v of videos) {
+    if (v.published) continue;
+    if (known.has(v.id)) { v.published = known.get(v.id); continue; }
+    try {
+      const html = await getText(`https://www.youtube.com/watch?v=${v.id}&hl=en`);
+      const m =
+        html.match(/itemprop="datePublished" content="([^"]+)"/) ||
+        html.match(/"publishDate":"([^"]+)"/) ||
+        html.match(/"uploadDate":"([^"]+)"/);
+      if (m && Date.parse(m[1])) v.published = m[1];
+      else note(`Tarih bulunamadı: ${v.id}`);
+    } catch (e) {
+      note(`Tarih okunamadı (${v.id}): ${e.message}`);
+    }
+    await sleep(400);
+  }
+  note(`Tarihi olan video: ${videos.filter((v) => v.published).length}/${videos.length}`);
+}
+
 const old = await readOld();
 try {
   let channelId = old.channelId;
   if (!channelId) channelId = (await findChannel()).id;
   let videos = await getVideos(channelId);
+  await fillDates(videos, old.videos || []);
   if (videos.length === 0 && (old.videos || []).length > 0) {
     console.log("::warning::Liste boş geldi, eski liste korunuyor.");
     videos = old.videos;
