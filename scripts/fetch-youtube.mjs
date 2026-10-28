@@ -82,22 +82,38 @@ function parseFeed(xml) {
 
 // Yedek: kanalın Videolar sayfasını okur (tarih bilgisi vermez).
 async function scrapeVideos(channelId) {
-  const html = await getText(`https://www.youtube.com/channel/${channelId}/videos`);
-  const seen = new Set();
   const out = [];
-  const re = /"videoRenderer":\{"videoId":"([\w-]{11})"[\s\S]*?"title":\{"runs":\[\{"text":"((?:[^"\\]|\\.)*)"/g;
-  for (const m of html.matchAll(re)) {
-    if (seen.has(m[1])) continue;
-    seen.add(m[1]);
-    let title = m[2];
-    try { title = JSON.parse(`"${m[2]}"`); } catch {}
-    out.push({
-      id: m[1],
-      title,
-      published: "",
-      thumb: `https://i.ytimg.com/vi/${m[1]}/hqdefault.jpg`,
-      url: `https://www.youtube.com/watch?v=${m[1]}`,
-    });
+  const seen = new Set();
+  for (const tab of ["videos", "shorts", "streams"]) {
+    let html = "";
+    try {
+      html = await getText(`https://www.youtube.com/channel/${channelId}/${tab}?hl=en`);
+    } catch (e) {
+      note(`${tab} sayfası okunamadı: ${e.message}`);
+      continue;
+    }
+    const count = (s) => html.split(s).length - 1;
+    note(`${tab}: ${html.length} bayt | videoId=${count('"videoId":"')} | contentId=${count('"contentId":"')} | lockupViewModel=${count("lockupViewModel")} | videoRenderer=${count('"videoRenderer"')}`);
+    // Hem eski (videoRenderer) hem yeni (lockupViewModel) yapıda kimliklerin yanındaki başlığı ara.
+    const idRe = /"(?:videoId|contentId)":"([\w-]{11})"/g;
+    for (const m of html.matchAll(idRe)) {
+      const id = m[1];
+      if (seen.has(id)) continue;
+      const after = html.slice(m.index, m.index + 3000);
+      const t = after.match(/"title":\{"(?:runs":\[\{"text|content)":"((?:[^"\\]|\\.)*)"/);
+      if (!t) continue;
+      let title = t[1];
+      try { title = JSON.parse(`"${t[1]}"`); } catch {}
+      seen.add(id);
+      out.push({
+        id,
+        title,
+        published: "",
+        thumb: `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
+        url: `https://www.youtube.com/watch?v=${id}`,
+      });
+      if (out.length >= MAX) break;
+    }
     if (out.length >= MAX) break;
   }
   return out;
