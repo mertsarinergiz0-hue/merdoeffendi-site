@@ -52,8 +52,10 @@ async function findChannel() {
         const m = html.match(re);
         if (!m) continue;
         note(`Sayfa ${u} | desen ${name} | kimlik ${m[1]} | başlık "${title}"`);
-        if (norm(title).includes(HANDLE)) return { id: m[1], title };
-        note(`Başlık kanalla eşleşmedi, bu kimlik kullanılmayacak: ${m[1]}`);
+        // @kullanıcıadı sayfasının kendi canonical adresi o kanalın kimliğidir; ayrıca ad kontrolü yap.
+        const trusted = (name === "canonical" && u.includes("/@")) || norm(title).includes("merdo");
+        if (trusted) return { id: m[1], title };
+        note(`Kanalla eşleşmedi, bu kimlik kullanılmayacak: ${m[1]}`);
         break;
       }
     } catch (e) {
