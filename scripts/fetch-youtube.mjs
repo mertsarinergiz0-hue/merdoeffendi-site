@@ -105,9 +105,16 @@ async function scrapeVideos(channelId) {
       let title = t[1];
       try { title = JSON.parse(`"${t[1]}"`); } catch {}
       // "3 days ago" gibi yazıdan yaklaşık yükleme tarihi hesapla (ay ve yıl yaklaşık sayılır).
-      const rel = after.match(/"content":"(?:Streamed |Premiered )?(\d+) (second|minute|hour|day|week|month|year)s? ago"/);
-      const unit = { second: 1e3, minute: 6e4, hour: 36e5, day: 864e5, week: 6048e5, month: 30 * 864e5, year: 365 * 864e5 };
+      const rel = after.match(/"content":"[^"]*?(\d+) (second|minute|hour|day|week|month|year|saniye|dakika|saat|gün|hafta|ay|yıl)s?(?: ago| önce)"/);
+      const unit = {
+        second: 1e3, minute: 6e4, hour: 36e5, day: 864e5, week: 6048e5, month: 30 * 864e5, year: 365 * 864e5,
+        saniye: 1e3, dakika: 6e4, saat: 36e5, "gün": 864e5, hafta: 6048e5, ay: 30 * 864e5, "yıl": 365 * 864e5,
+      };
       const published = rel ? new Date(Date.now() - Number(rel[1]) * unit[rel[2]]).toISOString() : "";
+      if (out.length === 0) {
+        const hint = after.match(/"content":"[^"]{0,80}"/g) || [];
+        note(`Örnek metinler (${id}): ${hint.slice(0, 8).join(" | ")}`);
+      }
       seen.add(id);
       out.push({
         id,
