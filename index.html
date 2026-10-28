@@ -327,9 +327,9 @@ const CONFIG = {
   liveLine: "Bu sayfa yanıyor (iyi anlamda)",
   heroTitle: "Hoş geldin, kemerlerini bağla",
   marquee: "BAĞIŞ YAP  ★  EKRANDA SAHNE AL  ★  KESİTLERİ KAÇIRMA  ★  MYSTERY PAKETİ AÇ, NE ÇIKACAĞI BELLİ DEĞİL  ★",
-  youtubeUrl: "https://www.youtube.com/merdoeffendi", // videos.json gelince gerçek kanal adresiyle değişir
+  youtubeUrl: "https://www.youtube.com/@merdoeffendi",
   kickChannel: "merdoeffendi",
-  donateUrl: "",   // bağış servisi bağlantın (oyunfor / bynogame). Boşsa buton "yakında" der
+  donateUrl: "https://donate.bynogame.com/merdoeffendi", // boşsa buton "yakında" der
   about: "MERDOEFFENDİ Kick'te canlı yayın yapar, en komik anları YouTube'a kesit olarak yükler. Bağış paketleriyle yayında ekrana kendi seçtiğin videoyu ya da GIF'i düşürebilirsin.",
   news: [
     {date:"28.10.2026", t:"Site yayında!", p:"Yeni bir kesit yüklendiğinde burada kendiliğinden görünür.", isNew:true}
@@ -547,7 +547,7 @@ async function readLive(){
     const r = await fetch("live.json?t=" + Date.now(), {cache:"no-store"});
     if(r.ok){
       const j = await r.json();
-      if(j.ok && j.live === true && Date.now() - Date.parse(j.checked) < 20*60*1000) return "live";
+      if(j.ok && j.live === true && Date.now() - Date.parse(j.checked) < 75*60*1000) return "live";
       if(j.ok && j.live === false) return "off";
     }
   }catch(e){}
