@@ -120,6 +120,7 @@ async function scrapeVideos(channelId) {
         id,
         title,
         published,
+        approx: Boolean(rel),
         thumb: `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
         url: `https://www.youtube.com/watch?v=${id}`,
       });
@@ -149,21 +150,38 @@ async function getVideos(channelId) {
 
 // Her videonun yükleme tarihini video sayfasından okur. Daha önce bulunan tarih saklanır, tekrar sorulmaz.
 async function fillDates(videos, oldVideos) {
-  const known = new Map(oldVideos.filter((v) => v.published).map((v) => [v.id, v.published]));
+  // Sadece kesin tarihi bulunmuş videolar (exact: true) saklanır; yaklaşık olanlar her gün yeniden denenir.
+  const known = new Map(oldVideos.filter((v) => v.exact && v.published).map((v) => [v.id, v.published]));
+  // Kesin tarih yoksa, daha önce kaydedilen yaklaşık tarih korunur (her gün "2 ay önce"ye kaymasın).
+  const oldAny = new Map(oldVideos.filter((v) => v.published).map((v) => [v.id, v.published]));
+  let diagDone = false;
   for (const v of videos) {
-    if (v.published) continue;
-    if (known.has(v.id)) { v.published = known.get(v.id); continue; }
+    if (known.has(v.id)) { v.published = known.get(v.id); v.exact = true; delete v.approx; continue; }
+    if (v.published && !v.approx) { v.exact = true; continue; }
     try {
       const html = await getText(`https://www.youtube.com/watch?v=${v.id}&hl=en`);
       const m =
         html.match(/itemprop="datePublished" content="([^"]+)"/) ||
         html.match(/"publishDate":"([^"]+)"/) ||
-        html.match(/"uploadDate":"([^"]+)"/);
-      if (m && Date.parse(m[1])) v.published = m[1];
-      else note(`Tarih bulunamadı: ${v.id}`);
+        html.match(/"uploadDate":"([^"]+)"/) ||
+        html.match(/"dateText":\{"simpleText":"([^"]+)"/);
+      if (m && Date.parse(m[1])) {
+        v.published = new Date(m[1]).toISOString();
+        v.exact = true;
+        delete v.approx;
+      } else {
+        if (!diagDone) {
+          diagDone = true;
+          const has = (s) => html.includes(s);
+          const ttl = (html.match(/<title>([^<]*)<\/title>/) || [, ""])[1].slice(0, 60);
+          note(`Tarih tanı (${v.id}): ${html.length} bayt | player=${has("ytInitialPlayerResponse")} | publishDate=${has("publishDate")} | datePublished=${has("datePublished")} | dateText=${has("dateText")} | bot=${has("confirm you")} | consent=${has("consent.youtube")} | başlık=${ttl}`);
+        }
+        note(`Tarih bulunamadı: ${v.id}`);
+      }
     } catch (e) {
       note(`Tarih okunamadı (${v.id}): ${e.message}`);
     }
+    if (!v.exact && oldAny.has(v.id)) v.published = oldAny.get(v.id);
     await sleep(400);
   }
   note(`Tarihi olan video: ${videos.filter((v) => v.published).length}/${videos.length}`);
