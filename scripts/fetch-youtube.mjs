@@ -148,6 +148,26 @@ async function getVideos(channelId) {
   return videos;
 }
 
+const TR_MONTHS = ["oca", "şub", "mar", "nis", "may", "haz", "tem", "ağu", "eyl", "eki", "kas", "ara"];
+// Video sayfasından yükleme tarihini okur: önce ISO biçimi, sonra "23 Eki 2026" ya da "Oct 23, 2026".
+function parseDate(html) {
+  const iso =
+    html.match(/itemprop="datePublished" content="([^"]+)"/) ||
+    html.match(/\\?"publishDate\\?":\\?"([^"\\]+)/) ||
+    html.match(/\\?"uploadDate\\?":\\?"([^"\\]+)/);
+  if (iso && Date.parse(iso[1])) return new Date(iso[1]).toISOString();
+  const dt = html.match(/"dateText":\{"simpleText":"([^"]+)"/);
+  if (dt) {
+    const tr = dt[1].toLocaleLowerCase("tr").match(/(\d{1,2})\s+([a-zçğıöşü]+)\.?\s+(\d{4})/);
+    if (tr) {
+      const mi = TR_MONTHS.findIndex((m) => tr[2].startsWith(m));
+      if (mi >= 0) return new Date(Date.UTC(Number(tr[3]), mi, Number(tr[1]), 12)).toISOString();
+    }
+    if (Date.parse(dt[1])) return new Date(dt[1]).toISOString();
+  }
+  return "";
+}
+
 // Her videonun yükleme tarihini video sayfasından okur. Daha önce bulunan tarih saklanır, tekrar sorulmaz.
 async function fillDates(videos, oldVideos) {
   // Sadece kesin tarihi bulunmuş videolar (exact: true) saklanır; yaklaşık olanlar her gün yeniden denenir.
@@ -155,18 +175,15 @@ async function fillDates(videos, oldVideos) {
   // Kesin tarih yoksa, daha önce kaydedilen yaklaşık tarih korunur (her gün "2 ay önce"ye kaymasın).
   const oldAny = new Map(oldVideos.filter((v) => v.published).map((v) => [v.id, v.published]));
   let diagDone = false;
+  let diagN = 0;
   for (const v of videos) {
     if (known.has(v.id)) { v.published = known.get(v.id); v.exact = true; delete v.approx; continue; }
     if (v.published && !v.approx) { v.exact = true; continue; }
     try {
       const html = await getText(`https://www.youtube.com/watch?v=${v.id}&hl=en`);
-      const m =
-        html.match(/itemprop="datePublished" content="([^"]+)"/) ||
-        html.match(/"publishDate":"([^"]+)"/) ||
-        html.match(/"uploadDate":"([^"]+)"/) ||
-        html.match(/"dateText":\{"simpleText":"([^"]+)"/);
-      if (m && Date.parse(m[1])) {
-        v.published = new Date(m[1]).toISOString();
+      const iso = parseDate(html);
+      if (iso) {
+        v.published = iso;
         v.exact = true;
         delete v.approx;
       } else {
@@ -175,6 +192,11 @@ async function fillDates(videos, oldVideos) {
           const has = (s) => html.includes(s);
           const ttl = (html.match(/<title>([^<]*)<\/title>/) || [, ""])[1].slice(0, 60);
           note(`Tarih tanı (${v.id}): ${html.length} bayt | player=${has("ytInitialPlayerResponse")} | publishDate=${has("publishDate")} | datePublished=${has("datePublished")} | dateText=${has("dateText")} | bot=${has("confirm you")} | consent=${has("consent.youtube")} | başlık=${ttl}`);
+        }
+        if (diagN++ < 2) {
+          const pd = (html.match(/.{0,30}publishDate.{0,70}/) || [""])[0];
+          const dt = (html.match(/.{0,10}dateText.{0,80}/) || [""])[0];
+          note(`Parça (${v.id}): ${pd} || ${dt}`);
         }
         note(`Tarih bulunamadı: ${v.id}`);
       }
