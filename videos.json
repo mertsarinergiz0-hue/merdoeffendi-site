@@ -1,8 +1,16 @@
 {
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "channelId": "UCq8j_Xo8-hmNrzlkYPcbSig",
   "channelUrl": "https://www.youtube.com/channel/UCq8j_Xo8-hmNrzlkYPcbSig",
   "videos": [
+    {
+      "id": "RfFtA2ocY1c",
+      "title": "🔴 FORTNİTE - TOKEN ARAMACA",
+      "published": "2026-11-06T23:22:22+00:00",
+      "thumb": "https://i.ytimg.com/vi/RfFtA2ocY1c/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=RfFtA2ocY1c",
+      "exact": true
+    },
     {
       "id": "cySHjTk2yhU",
       "title": "tahmin işinde varız part 3",
@@ -89,14 +97,6 @@
       "published": "2026-08-09T09:32:06+00:00",
       "thumb": "https://i.ytimg.com/vi/z1mudEOfqq0/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=z1mudEOfqq0",
-      "exact": true
-    },
-    {
-      "id": "fmExuf3CVko",
-      "title": "Böyle adam mı öldürülür ? The last of us Part 1 #merdo #oyun #thelastofus #fyy",
-      "published": "2026-08-08T10:32:20+00:00",
-      "thumb": "https://i.ytimg.com/vi/fmExuf3CVko/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=fmExuf3CVko",
       "exact": true
     }
   ]
