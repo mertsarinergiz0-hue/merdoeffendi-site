@@ -1,11 +1,27 @@
 {
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "channelId": "UCq8j_Xo8-hmNrzlkYPcbSig",
   "channelUrl": "https://www.youtube.com/channel/UCq8j_Xo8-hmNrzlkYPcbSig",
   "videos": [
     {
+      "id": "4X5OqB4EAOw",
+      "title": "🔴 FORTNİTE - TOKEN ARAMACA GÜN 2",
+      "published": "2026-11-07T22:21:36+00:00",
+      "thumb": "https://i.ytimg.com/vi/4X5OqB4EAOw/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=4X5OqB4EAOw",
+      "exact": true
+    },
+    {
+      "id": "CXGRi7WT4D0",
+      "title": "🔴 FORTNİTE - TOKEN ARAMACA GÜN 2",
+      "published": "2026-11-07T15:38:23+00:00",
+      "thumb": "https://i.ytimg.com/vi/CXGRi7WT4D0/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=CXGRi7WT4D0",
+      "exact": true
+    },
+    {
       "id": "RfFtA2ocY1c",
-      "title": "🔴 FORTNİTE - TOKEN ARAMACA",
+      "title": "🔴 FORTNİTE - TOKEN ARAMACA GÜN 2",
       "published": "2026-11-06T23:22:22+00:00",
       "thumb": "https://i.ytimg.com/vi/RfFtA2ocY1c/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=RfFtA2ocY1c",
@@ -81,22 +97,6 @@
       "published": "2026-08-11T12:00:00.000Z",
       "thumb": "https://i.ytimg.com/vi/7wOSo6Fx_zc/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=7wOSo6Fx_zc",
-      "exact": true
-    },
-    {
-      "id": "S5IkzhBrOlQ",
-      "title": "SONA DOĞRU : HASTANEYE ULAŞMAK ÜZEREYİZ ! THE LAST OF US PART l | BÖLÜM 5",
-      "published": "2026-08-09T12:00:00.000Z",
-      "thumb": "https://i.ytimg.com/vi/S5IkzhBrOlQ/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=S5IkzhBrOlQ",
-      "exact": true
-    },
-    {
-      "id": "z1mudEOfqq0",
-      "title": "İHANETİN BEDELİ DENİR BUNA - THE LAST OF US PART 1  #oyun #thelastofus #merdo #keşfet",
-      "published": "2026-08-09T09:32:06+00:00",
-      "thumb": "https://i.ytimg.com/vi/z1mudEOfqq0/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=z1mudEOfqq0",
       "exact": true
     }
   ]
