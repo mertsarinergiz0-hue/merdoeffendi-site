@@ -1,8 +1,16 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-11",
   "channelId": "UCq8j_Xo8-hmNrzlkYPcbSig",
   "channelUrl": "https://www.youtube.com/channel/UCq8j_Xo8-hmNrzlkYPcbSig",
   "videos": [
+    {
+      "id": "5eKiUZZEgDQ",
+      "title": "🔴 FORTNİTE - TOKEN ÇIKTI GÜN 2 !!!",
+      "published": "2026-11-10T22:23:57+00:00",
+      "thumb": "https://i.ytimg.com/vi/5eKiUZZEgDQ/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=5eKiUZZEgDQ",
+      "exact": true
+    },
     {
       "id": "oZ2ySC86gV0",
       "title": "🔴 FORTNİTE - TOKEN ÇIKTIIIIIIIII !!!",
@@ -89,14 +97,6 @@
       "published": "2026-10-28T23:45:04+00:00",
       "thumb": "https://i.ytimg.com/vi/cySHjTk2yhU/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=cySHjTk2yhU",
-      "exact": true
-    },
-    {
-      "id": "OybrG8QZhQ4",
-      "title": "MERDO -TAHMİN İŞİNDE VARIZ !",
-      "published": "2026-10-28T12:00:00.000Z",
-      "thumb": "https://i.ytimg.com/vi/OybrG8QZhQ4/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=OybrG8QZhQ4",
       "exact": true
     }
   ]
