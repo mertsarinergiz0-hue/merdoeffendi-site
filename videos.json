@@ -1,8 +1,16 @@
 {
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "channelId": "UCq8j_Xo8-hmNrzlkYPcbSig",
   "channelUrl": "https://www.youtube.com/channel/UCq8j_Xo8-hmNrzlkYPcbSig",
   "videos": [
+    {
+      "id": "8wFiBIVifUM",
+      "title": "🔴 BİRAZ FORTNİTE SONRA - G T A 5 HİKAYE MODU !",
+      "published": "2026-11-12T09:27:22+00:00",
+      "thumb": "https://i.ytimg.com/vi/8wFiBIVifUM/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=8wFiBIVifUM",
+      "exact": true
+    },
     {
       "id": "5eKiUZZEgDQ",
       "title": "🔴 FORTNİTE - TOKEN ÇIKTI GÜN 2 !!!",
@@ -89,14 +97,6 @@
       "published": "2026-11-06T23:22:22+00:00",
       "thumb": "https://i.ytimg.com/vi/RfFtA2ocY1c/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=RfFtA2ocY1c",
-      "exact": true
-    },
-    {
-      "id": "cySHjTk2yhU",
-      "title": "tahmin işinde varız part 3",
-      "published": "2026-10-28T23:45:04+00:00",
-      "thumb": "https://i.ytimg.com/vi/cySHjTk2yhU/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=cySHjTk2yhU",
       "exact": true
     }
   ]
