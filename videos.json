@@ -1,8 +1,16 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "channelId": "UCq8j_Xo8-hmNrzlkYPcbSig",
   "channelUrl": "https://www.youtube.com/channel/UCq8j_Xo8-hmNrzlkYPcbSig",
   "videos": [
+    {
+      "id": "KfE-td-Dkg4",
+      "title": "🔴 BİRAZ FORTNİTE OYNAYALIM MI ?",
+      "published": "2026-11-14T00:02:31+00:00",
+      "thumb": "https://i.ytimg.com/vi/KfE-td-Dkg4/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=KfE-td-Dkg4",
+      "exact": true
+    },
     {
       "id": "8wFiBIVifUM",
       "title": "🔴 BİRAZ FORTNİTE SONRA - G T A 5 HİKAYE MODU !",
@@ -89,14 +97,6 @@
       "published": "2026-11-07T15:38:23+00:00",
       "thumb": "https://i.ytimg.com/vi/CXGRi7WT4D0/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=CXGRi7WT4D0",
-      "exact": true
-    },
-    {
-      "id": "RfFtA2ocY1c",
-      "title": "🔴 FORTNİTE - TOKEN ARAMACA GÜN 2",
-      "published": "2026-11-06T23:22:22+00:00",
-      "thumb": "https://i.ytimg.com/vi/RfFtA2ocY1c/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=RfFtA2ocY1c",
       "exact": true
     }
   ]
