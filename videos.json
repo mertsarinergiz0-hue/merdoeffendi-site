@@ -1,8 +1,24 @@
 {
-  "updated": "2026-11-14",
+  "updated": "2026-11-15",
   "channelId": "UCq8j_Xo8-hmNrzlkYPcbSig",
   "channelUrl": "https://www.youtube.com/channel/UCq8j_Xo8-hmNrzlkYPcbSig",
   "videos": [
+    {
+      "id": "Tyg_6jY7nYQ",
+      "title": "🔴  CANLI YAYIN - G T A 5 - HİKAYE MODU",
+      "published": "2026-11-14T23:29:04+00:00",
+      "thumb": "https://i.ytimg.com/vi/Tyg_6jY7nYQ/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=Tyg_6jY7nYQ",
+      "exact": true
+    },
+    {
+      "id": "jQgNtQ1nJjQ",
+      "title": "🔴  G T A 5",
+      "published": "2026-11-14T22:42:37+00:00",
+      "thumb": "https://i.ytimg.com/vi/jQgNtQ1nJjQ/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=jQgNtQ1nJjQ",
+      "exact": true
+    },
     {
       "id": "KfE-td-Dkg4",
       "title": "🔴 BİRAZ FORTNİTE OYNAYALIM MI ?",
@@ -81,22 +97,6 @@
       "published": "2026-11-08T17:53:26+00:00",
       "thumb": "https://i.ytimg.com/vi/v_7mC33mhrc/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=v_7mC33mhrc",
-      "exact": true
-    },
-    {
-      "id": "4X5OqB4EAOw",
-      "title": "🔴 FORTNİTE - TOKEN ARAMACA GÜN 2",
-      "published": "2026-11-07T22:21:36+00:00",
-      "thumb": "https://i.ytimg.com/vi/4X5OqB4EAOw/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=4X5OqB4EAOw",
-      "exact": true
-    },
-    {
-      "id": "CXGRi7WT4D0",
-      "title": "🔴 FORTNİTE - TOKEN ARAMACA GÜN 2",
-      "published": "2026-11-07T15:38:23+00:00",
-      "thumb": "https://i.ytimg.com/vi/CXGRi7WT4D0/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=CXGRi7WT4D0",
       "exact": true
     }
   ]
