@@ -1,8 +1,16 @@
 {
-  "updated": "2026-11-15",
+  "updated": "2026-11-16",
   "channelId": "UCq8j_Xo8-hmNrzlkYPcbSig",
   "channelUrl": "https://www.youtube.com/channel/UCq8j_Xo8-hmNrzlkYPcbSig",
   "videos": [
+    {
+      "id": "r0ghy6lqJx0",
+      "title": "🔴  CANLI YAYIN G T A 5 - HİKAYE MODU",
+      "published": "2026-11-15T22:03:21+00:00",
+      "thumb": "https://i.ytimg.com/vi/r0ghy6lqJx0/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=r0ghy6lqJx0",
+      "exact": true
+    },
     {
       "id": "Tyg_6jY7nYQ",
       "title": "🔴  CANLI YAYIN - G T A 5 - HİKAYE MODU",
@@ -89,14 +97,6 @@
       "published": "2026-11-09T08:37:33+00:00",
       "thumb": "https://i.ytimg.com/vi/f7qy22w0gJ4/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=f7qy22w0gJ4",
-      "exact": true
-    },
-    {
-      "id": "v_7mC33mhrc",
-      "title": "🔴 FORTNİTE - TOKEN ARAMACA GÜN 3 BULAMIYORUZZZ",
-      "published": "2026-11-08T17:53:26+00:00",
-      "thumb": "https://i.ytimg.com/vi/v_7mC33mhrc/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=v_7mC33mhrc",
       "exact": true
     }
   ]
