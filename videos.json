@@ -1,11 +1,27 @@
 {
-  "updated": "2026-11-19",
+  "updated": "2026-11-20",
   "channelId": "UCq8j_Xo8-hmNrzlkYPcbSig",
   "channelUrl": "https://www.youtube.com/channel/UCq8j_Xo8-hmNrzlkYPcbSig",
   "videos": [
     {
+      "id": "afs-i0hrJ2U",
+      "title": "🔴  FORTNİTE YAYINLARI BAŞLAMIŞTIR",
+      "published": "2026-11-20T12:56:39+00:00",
+      "thumb": "https://i.ytimg.com/vi/afs-i0hrJ2U/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=afs-i0hrJ2U",
+      "exact": true
+    },
+    {
+      "id": "zO59lP2L08o",
+      "title": "🔴  FORTNİTE YAYINLARI BAŞLAMIŞTIR",
+      "published": "2026-11-20T12:53:09+00:00",
+      "thumb": "https://i.ytimg.com/vi/zO59lP2L08o/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=zO59lP2L08o",
+      "exact": true
+    },
+    {
       "id": "xCaJO8tjKXM",
-      "title": "🔴  GTA 6 - GÜN 2.1 GECE EKSTRA UZUN YAYIN",
+      "title": "🔴  FORTNİTE YAYINLARI BAŞLAMIŞTIR",
       "published": "2026-11-19T11:55:56+00:00",
       "thumb": "https://i.ytimg.com/vi/xCaJO8tjKXM/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=xCaJO8tjKXM",
@@ -81,22 +97,6 @@
       "published": "2026-11-12T09:27:22+00:00",
       "thumb": "https://i.ytimg.com/vi/8wFiBIVifUM/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=8wFiBIVifUM",
-      "exact": true
-    },
-    {
-      "id": "5eKiUZZEgDQ",
-      "title": "🔴 FORTNİTE - TOKEN ÇIKTI GÜN 2 !!!",
-      "published": "2026-11-10T22:23:57+00:00",
-      "thumb": "https://i.ytimg.com/vi/5eKiUZZEgDQ/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=5eKiUZZEgDQ",
-      "exact": true
-    },
-    {
-      "id": "oZ2ySC86gV0",
-      "title": "🔴 FORTNİTE - TOKEN ÇIKTIIIIIIIII !!!",
-      "published": "2026-11-09T20:22:58+00:00",
-      "thumb": "https://i.ytimg.com/vi/oZ2ySC86gV0/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=oZ2ySC86gV0",
       "exact": true
     }
   ]
