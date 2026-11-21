@@ -1,22 +1,54 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "channelId": "UCq8j_Xo8-hmNrzlkYPcbSig",
   "channelUrl": "https://www.youtube.com/channel/UCq8j_Xo8-hmNrzlkYPcbSig",
   "videos": [
+    {
+      "id": "6HZ6jIktDYk",
+      "title": "🔴  FORTNİTEEE GECESİ",
+      "published": "2026-11-21T13:09:29+00:00",
+      "thumb": "https://i.ytimg.com/vi/6HZ6jIktDYk/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=6HZ6jIktDYk",
+      "exact": true
+    },
+    {
+      "id": "AjJ7Mjwru0k",
+      "title": "GTA 6 AYNI ZAMAN İLİŞKİSİ OLANLAR İÇİN BİR SINAV !!",
+      "published": "2026-11-21T11:42:13+00:00",
+      "thumb": "https://i.ytimg.com/vi/AjJ7Mjwru0k/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=AjJ7Mjwru0k",
+      "exact": true
+    },
+    {
+      "id": "FdZPHdBLKIM",
+      "title": "🔴  GTA 6 YAYINLARI COMEBACK",
+      "published": "2026-11-21T11:03:43+00:00",
+      "thumb": "https://i.ytimg.com/vi/FdZPHdBLKIM/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=FdZPHdBLKIM",
+      "exact": true
+    },
+    {
+      "id": "zO59lP2L08o",
+      "title": "🔴  GTA 6 YAYINLARI COMEBACK",
+      "published": "2026-11-20T12:53:09+00:00",
+      "thumb": "https://i.ytimg.com/vi/zO59lP2L08o/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=zO59lP2L08o",
+      "exact": true
+    },
+    {
+      "id": "RO5o_u5OowU",
+      "title": "🔴  GTA 6 YAYINLARI COMEBACK",
+      "published": "2026-11-20T17:23:28+00:00",
+      "thumb": "https://i.ytimg.com/vi/RO5o_u5OowU/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=RO5o_u5OowU",
+      "exact": true
+    },
     {
       "id": "afs-i0hrJ2U",
       "title": "🔴  FORTNİTE YAYINLARI BAŞLAMIŞTIR",
       "published": "2026-11-20T12:56:39+00:00",
       "thumb": "https://i.ytimg.com/vi/afs-i0hrJ2U/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=afs-i0hrJ2U",
-      "exact": true
-    },
-    {
-      "id": "zO59lP2L08o",
-      "title": "🔴  FORTNİTE YAYINLARI BAŞLAMIŞTIR",
-      "published": "2026-11-20T12:53:09+00:00",
-      "thumb": "https://i.ytimg.com/vi/zO59lP2L08o/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=zO59lP2L08o",
       "exact": true
     },
     {
@@ -65,38 +97,6 @@
       "published": "2026-11-15T22:03:21+00:00",
       "thumb": "https://i.ytimg.com/vi/r0ghy6lqJx0/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=r0ghy6lqJx0",
-      "exact": true
-    },
-    {
-      "id": "Tyg_6jY7nYQ",
-      "title": "🔴  CANLI YAYIN - G T A 5 - HİKAYE MODU",
-      "published": "2026-11-14T23:29:04+00:00",
-      "thumb": "https://i.ytimg.com/vi/Tyg_6jY7nYQ/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=Tyg_6jY7nYQ",
-      "exact": true
-    },
-    {
-      "id": "jQgNtQ1nJjQ",
-      "title": "🔴  G T A 5",
-      "published": "2026-11-14T22:42:37+00:00",
-      "thumb": "https://i.ytimg.com/vi/jQgNtQ1nJjQ/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=jQgNtQ1nJjQ",
-      "exact": true
-    },
-    {
-      "id": "KfE-td-Dkg4",
-      "title": "🔴 BİRAZ FORTNİTE OYNAYALIM MI ?",
-      "published": "2026-11-14T00:02:31+00:00",
-      "thumb": "https://i.ytimg.com/vi/KfE-td-Dkg4/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=KfE-td-Dkg4",
-      "exact": true
-    },
-    {
-      "id": "8wFiBIVifUM",
-      "title": "🔴 BİRAZ FORTNİTE SONRA - G T A 5 HİKAYE MODU !",
-      "published": "2026-11-12T09:27:22+00:00",
-      "thumb": "https://i.ytimg.com/vi/8wFiBIVifUM/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=8wFiBIVifUM",
       "exact": true
     }
   ]
