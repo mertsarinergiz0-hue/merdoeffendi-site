@@ -1,8 +1,16 @@
 {
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "channelId": "UCq8j_Xo8-hmNrzlkYPcbSig",
   "channelUrl": "https://www.youtube.com/channel/UCq8j_Xo8-hmNrzlkYPcbSig",
   "videos": [
+    {
+      "id": "ImYHgxamPB8",
+      "title": "🔴  FORTNİTEEE token bitti :)",
+      "published": "2026-11-23T13:01:18+00:00",
+      "thumb": "https://i.ytimg.com/vi/ImYHgxamPB8/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=ImYHgxamPB8",
+      "exact": true
+    },
     {
       "id": "JgPbAhizwmM",
       "title": "Maşallah dediğimiz kendine dikkat etsin #gta6  #gta  #gtafunnymoments",
@@ -89,14 +97,6 @@
       "published": "2026-11-19T00:59:34+00:00",
       "thumb": "https://i.ytimg.com/vi/ZOb8fqL0nwc/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=ZOb8fqL0nwc",
-      "exact": true
-    },
-    {
-      "id": "7BpJmiTkkb0",
-      "title": "🔴  CANLI YAYIN FORTNİTE SONRA DA G T A 5 - HİKAYE MODU",
-      "published": "2026-11-18T00:09:51+00:00",
-      "thumb": "https://i.ytimg.com/vi/7BpJmiTkkb0/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=7BpJmiTkkb0",
       "exact": true
     }
   ]
