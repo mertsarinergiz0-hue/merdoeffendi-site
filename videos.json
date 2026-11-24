@@ -1,14 +1,30 @@
 {
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "channelId": "UCq8j_Xo8-hmNrzlkYPcbSig",
   "channelUrl": "https://www.youtube.com/channel/UCq8j_Xo8-hmNrzlkYPcbSig",
   "videos": [
+    {
+      "id": "KDG7jJ-xBss",
+      "title": "Hayır hayvanları seviyorum vallaha bak ! 🥹 #gta6 #gta",
+      "published": "2026-11-24T11:29:57+00:00",
+      "thumb": "https://i.ytimg.com/vi/KDG7jJ-xBss/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=KDG7jJ-xBss",
+      "exact": true
+    },
     {
       "id": "ImYHgxamPB8",
       "title": "🔴  FORTNİTEEE token bitti :)",
       "published": "2026-11-23T13:01:18+00:00",
       "thumb": "https://i.ytimg.com/vi/ImYHgxamPB8/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=ImYHgxamPB8",
+      "exact": true
+    },
+    {
+      "id": "p9Phdt01MXs",
+      "title": "Yanımızda ki kıza laf atması kabul edilemez #gta6 bile olsa sonları iyi bitmedi",
+      "published": "2026-11-23T22:27:06+00:00",
+      "thumb": "https://i.ytimg.com/vi/p9Phdt01MXs/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=p9Phdt01MXs",
       "exact": true
     },
     {
@@ -81,22 +97,6 @@
       "published": "2026-11-19T11:55:56+00:00",
       "thumb": "https://i.ytimg.com/vi/xCaJO8tjKXM/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=xCaJO8tjKXM",
-      "exact": true
-    },
-    {
-      "id": "GtwUpJvSN-U",
-      "title": "GTA 6 -  BU OYUNUN DETAYLARI BENİ BİTİRİYOR",
-      "published": "2026-11-19T09:29:37+00:00",
-      "thumb": "https://i.ytimg.com/vi/GtwUpJvSN-U/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=GtwUpJvSN-U",
-      "exact": true
-    },
-    {
-      "id": "ZOb8fqL0nwc",
-      "title": "🔴  O GECE BU GECE - 00:00'dan GECE YARISI GTA 6 GİRİLİYOR TÜRKÇE ALT YAZILI",
-      "published": "2026-11-19T00:59:34+00:00",
-      "thumb": "https://i.ytimg.com/vi/ZOb8fqL0nwc/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=ZOb8fqL0nwc",
       "exact": true
     }
   ]
