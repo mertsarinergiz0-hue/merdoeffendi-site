@@ -1,8 +1,16 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "channelId": "UCq8j_Xo8-hmNrzlkYPcbSig",
   "channelUrl": "https://www.youtube.com/channel/UCq8j_Xo8-hmNrzlkYPcbSig",
   "videos": [
+    {
+      "id": "rbVUxshW65k",
+      "title": "GTA 6'da NPC'ye Sürttüm, İntikam Aldı 😄 #gta6",
+      "published": "2026-11-26T09:34:08+00:00",
+      "thumb": "https://i.ytimg.com/vi/rbVUxshW65k/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=rbVUxshW65k",
+      "exact": true
+    },
     {
       "id": "KDG7jJ-xBss",
       "title": "Hayır hayvanları seviyorum vallaha bak ! 🥹 #gta6 #gta",
@@ -89,14 +97,6 @@
       "published": "2026-11-20T12:56:39+00:00",
       "thumb": "https://i.ytimg.com/vi/afs-i0hrJ2U/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=afs-i0hrJ2U",
-      "exact": true
-    },
-    {
-      "id": "xCaJO8tjKXM",
-      "title": "🔴 FORTNITE YAYINLARI BAŞLAMIŞTIR",
-      "published": "2026-11-19T11:55:56+00:00",
-      "thumb": "https://i.ytimg.com/vi/xCaJO8tjKXM/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=xCaJO8tjKXM",
       "exact": true
     }
   ]
