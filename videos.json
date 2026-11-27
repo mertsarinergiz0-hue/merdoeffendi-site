@@ -1,8 +1,24 @@
 {
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "channelId": "UCq8j_Xo8-hmNrzlkYPcbSig",
   "channelUrl": "https://www.youtube.com/channel/UCq8j_Xo8-hmNrzlkYPcbSig",
   "videos": [
+    {
+      "id": "2y_bRT8dJL4",
+      "title": "GTA 6'da Bu Arabanın Başına Gelmeyen Kalmadı 😭 #gta6",
+      "published": "2026-11-27T08:06:49+00:00",
+      "thumb": "https://i.ytimg.com/vi/2y_bRT8dJL4/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=2y_bRT8dJL4",
+      "exact": true
+    },
+    {
+      "id": "SdEQ09GEfWA",
+      "title": "GTA 6'da Adama Yardım Ettik Lambo Kaptık 😎 #gta6",
+      "published": "2026-11-26T22:22:08+00:00",
+      "thumb": "https://i.ytimg.com/vi/SdEQ09GEfWA/hqdefault.jpg",
+      "url": "https://www.youtube.com/watch?v=SdEQ09GEfWA",
+      "exact": true
+    },
     {
       "id": "rbVUxshW65k",
       "title": "GTA 6'da NPC'ye Sürttüm, İntikam Aldı 😄 #gta6",
@@ -81,22 +97,6 @@
       "published": "2026-11-20T12:53:09+00:00",
       "thumb": "https://i.ytimg.com/vi/zO59lP2L08o/hqdefault.jpg",
       "url": "https://www.youtube.com/watch?v=zO59lP2L08o",
-      "exact": true
-    },
-    {
-      "id": "RO5o_u5OowU",
-      "title": "🔴 GTA 6 YAYINLARI COMEBACK",
-      "published": "2026-11-20T17:23:28+00:00",
-      "thumb": "https://i.ytimg.com/vi/RO5o_u5OowU/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=RO5o_u5OowU",
-      "exact": true
-    },
-    {
-      "id": "afs-i0hrJ2U",
-      "title": "🔴 FORTNITE YAYINLARI BAŞLAMIŞTIR",
-      "published": "2026-11-20T12:56:39+00:00",
-      "thumb": "https://i.ytimg.com/vi/afs-i0hrJ2U/hqdefault.jpg",
-      "url": "https://www.youtube.com/watch?v=afs-i0hrJ2U",
       "exact": true
     }
   ]
